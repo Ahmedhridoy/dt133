@@ -28,22 +28,31 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
-# Inherit some common XPerience stuff.
-$(call inherit-product, vendor/xperience/config/common.mk)
+# Inherit some common ArrowOS stuff
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_INCLUDE_PIXEL_CHARGER := true
+TARGET_USES_BLUR := false
+DEVICE_MAINTAINER := Apex_Not_Legend
+$(call inherit-product, vendor/arrow/config/common.mk)
+# Call recording
+TARGET_SUPPORTS_CALL_RECORDING := true
+# Quick tap
+TARGET_SUPPORTS_QUICK_TAP := true
 
-
-# Boot Animation
+#Extra_Flags
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Build Fingerprint
-BUILD_FINGERPRINT := "google/coral/coral:13/TP1A.220624.014/8819323:user/release-keys"
+BUILD_FINGERPRINT := "xiaomi/lavender/lavender:10/QKQ1.190910.002/V12.5.3.0.QFGMIXM:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="lavender" \
     PRODUCT_NAME="lavender" \
-    PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V11.0.1.0.QFGMIXM release-keys"
+    PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V12.5.3.0.QFGMIXM release-keys"
 
 # Device identifier
-PRODUCT_NAME := xperience_lavender
+PRODUCT_NAME := arrow_lavender
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
 PRODUCT_DEVICE := lavender
