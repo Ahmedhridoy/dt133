@@ -33,7 +33,8 @@ TARGET_BOOT_ANIMATION_RES := 720
 TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_USES_BLUR := false
 DEVICE_MAINTAINER := Apex_Not_Legend
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common PixelExperience stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 # Call recording
 TARGET_SUPPORTS_CALL_RECORDING := true
 # Quick tap
@@ -52,7 +53,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V12.5.3.0.QFGMIXM release-keys"
 
 # Device identifier
-PRODUCT_NAME := arrow_lavender
+PRODUCT_NAME := aosp_lavender
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
 PRODUCT_DEVICE := lavender

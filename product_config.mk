@@ -1,4 +1,4 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_lavender.mk
+    $(LOCAL_DIR)/aosp_lavender.mk
 
-COMMON_LUNCH_CHOICES := arrow_lavender-userdebug
+COMMON_LUNCH_CHOICES := aosp_lavender-userdebug
